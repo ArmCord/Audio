@@ -1,0 +1,5 @@
+const app = require('./bin/Audio.node')
+console.log(app.awesome)
+console.log(JSON.parse(app.getWindowNames()))
+console.log(JSON.parse(app.getOutputNames()))
+app.startAudioDevice(JSON.parse(app.getOutputNames()).outputNames[1], JSON.parse(app.getWindowNames()).windowNames[1])
